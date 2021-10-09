@@ -1,0 +1,349 @@
+body{
+    font-family:"Open sans";}
+
+*{box-sizing: border-box;
+    margin: 0;}
+
+.container > * + * {
+    margin-top: 20px;}
+
+#page{/*Mise en forme du bloc page*/
+    /*max-width: 1400px;
+    max-height: 2666px;*/
+    margin: auto;
+    width: 100%;}
+
+h1{/*Police des titres H1 en OpenSans Bold, taille 48px*/
+    font-weight: 700;
+    font-size: 48px;}
+
+h2{/*Police des H2 en OpenSans Semi-Bold*/
+    font-weight: 600;}
+
+h3{/*Police des H3 en OpenSans*/
+    font-weight: 400;}
+
+p{/*Paragraphes en OpenSans, taille 16px*/ 
+    font-weight: 300;
+    font-size: 16px;}
+
+    
+/**********HEADDER (LOGO+NAV)**********/
+header{
+    background-color: #DD5555;
+    height: 52px;
+    width: 100%;
+    position: sticky;/*header sticky sur le haut de la page*/
+    top: 0;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav_ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav_ul a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 89px;
+    font-size: 14px;
+}
+
+.nav_ul a:hover{/*Mise en forme lors du survol des liens de la nav*/
+    background-color: #a64040;
+    font-weight: bold;
+    letter-spacing: .05rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+}
+
+
+/**********BANNIERE UP**********/
+
+#banniere_up_page{/*Mise en forme de a bannière image haut de page*/
+    background-image: url("images/about.jpg.png"); 
+    background-repeat: no-repeat;/*Bloque les répétitions de l'image*/
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;/*Alignement des textes & icones qui sont dessus*/
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 660px;
+    padding: 0;
+    margin: 0;}
+
+#banniere_titres{/*Mise en forme des textes*/
+    color: white;
+    border-bottom: solid white 1px;/*Mise en forme de la bordure basse*/
+    padding-bottom: 23px;}
+    
+#banniere_titres h3{/*Taille du h3 de la bannière à 24px*/
+    font-size: 24px;}
+
+#banniere_bouton{/*Mise en forme de la div des boutons de la bannière*/
+    width: 400px;
+    height: 46px;
+    display: flex;/*FlexBox*/
+    justify-content: space-between;/*Espacement interne du contenu*/
+    margin-top: 25px;}   
+
+#banniere_bouton :hover{    /*Mise en forme de l'effet de survol*/
+    letter-spacing: .05rem;
+    position: relative;
+    background: white;
+    color: #DD5555;
+    font-weight: bold;
+    border-radius: .5rem;
+    transition: .2s all ease-in-out;}
+
+.bouton_like, .bouton_love, .bouton_buy{/*Mise en forme boutons*/
+    border-radius: 5px;/*Arrondir les angles*/
+    width: 112px;
+    height: 46px;
+    line-height: 46px;
+    background-color: white;
+    color:#2E2E2E;
+    font-size: 18px;
+    text-decoration: none;/*Enlever la mise en forme par défaut des liens*/
+    margin: auto;}
+
+.bouton_like img{
+    padding-right: 13.25px;}/*Ecartement de l'image à droite*/
+
+.bouton_love img{
+    padding-right: 11.25px;}/*Ecartement de l'image à droite*/
+
+.bouton_buy img{
+    padding-right: 6.25px;}/*Ecartement de l'image à droite*/
+
+/**********SERVICES**********/
+
+#service, #equipe{/*Mise en forme du texte des sections, couleur*/
+    color: #2E2E2E;}
+
+#titre_article_1 h2{/*Mise en forme du h2 de l'article*/
+    text-align: center;
+    font-size: 36px;
+    line-height: 43.2px;
+    margin-top: 52px;}/*Marge du haut*/
+
+.services, .equipe{ /*Sections*/
+    background-color: transparent;
+    display: flex;
+    padding: 0;
+    margin: 0;}
+
+#service{/*Mise en forme des services présentés*/
+    display: flex;
+    flex-flow: row wrap;/*Alignement en ligne + Retour à la ligne des items quand il n'y a plus de place*/
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    min-height: 649.5px;
+    margin:0;
+    margin-top: 53px;}
+
+#service1, #service2, #service3, #service4, #service5, #service6{/*Mise en forme des div de chaque services*/
+    width: 358px;
+    height: 266px;
+    margin: 10px;
+    text-align: center;}
+
+#logo_service1, #logo_service2, #logo_service3, #logo_service4, #logo_service5, #logo_service6{/*Mise en forme des images des div*/
+    background-color: #DD5555;
+    border-radius: 50% ;
+    width: 120px;
+    height: 120px;
+    display: flex;/*Flexbox*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;}
+
+#logo_service1 img, #logo_service2 img, #logo_service3 img, #logo_service4 img, #logo_service5 img, #logo_service6 img{
+    margin: auto;/*Centrer les images*/
+    padding: 0%;}
+
+/**********TEAM**********/
+
+#banniere_down_page{    /*Bannière en bas de page*/
+    background-image: url("images/team.jpg.png");
+    background-repeat: no-repeat;   /*Bloque la répétition de l'image*/
+    background-size: cover;
+    display: flex;  /*Flexbox*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 46px;
+    text-align: center;
+    color: white;
+    width: auto;
+    height: 240px;} /*Hauteur*/
+    
+#team{/*Mise en forme bloc team*/
+    display: flex;/*Flexbox*/
+    flex-direction: row;
+    justify-content: space-around;/*Ajout écart autour des div de la flexbox*/
+    flex-wrap: wrap;
+    width: auto;
+    min-height: 429px;
+    margin-left: auto;/*Centrer gauche*/
+    margin-right: auto;/*Centrer droite*/
+    padding-right: 142px;
+    padding-left: 142px;
+    margin-bottom: 64px;}
+
+#tex_talign, #marge_inn, #isaac_newton, #ash_tehemel{/*Div des membres*/
+    width: 239px;/*Taille des div*/
+    height: 365px;
+    margin-top: 64px;
+    text-align: center;}
+
+.avatar_team img{/*Images en rond*/
+    margin-bottom: 24px;
+    border-radius: 50%;}
+
+#bouton_team{/*Mise en forme boutons team*/
+    background-color: #DD5555;
+    border-radius: 5px;/*Arrondir les angles*/
+    color: white;
+    font-size: 18px;
+    text-decoration: none;/*Enlever mise en forme par défaut des liens*/
+    width: 132px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15.75px;
+    margin: auto;}/*Centrer l'élément*/
+
+#bouton_team:hover{ /*Mise en forme de l'effet de survol*/
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    font-weight: bold;
+    letter-spacing: .05rem;
+    transform: scale(1);    /*Effet de zoom au survol*/}
+
+#bouton_team img{/*Mise en forme images dans les boutons*/
+    padding-right: 5.1px;
+    padding-left: 10px;
+    vertical-align: middle;}/*Alignement vertical*/
+
+/**********FORMULAIRE**********/
+
+#contact{/*Atteinte du pied de page*/
+    background-color: #DD5555;/*Couleur de fond*/
+    height: auto;
+    width: auto;}
+
+#formulaire{/*Groupe formulaire bas de page*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 64px;}
+
+#formulaire label{  /*Mise en forme des labels du formulaire*/
+    color: white;
+    font-size: 16px;
+    text-align: left;}/*Alignement des labels à gauche*/
+
+#titre_formulaire{  /*Mise en forme div titre du formulaire*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;}
+
+#titre_formulaire h2{   /*Mise en forme du titre du footer*/
+    text-align: center;
+    color: white;
+    font-size: 36px;    /*Taille du texte*/
+    margin-top: 51.5px; /*Ecartement de la div titre et div formulaire up*/}
+
+#formulaire_up{/*Mise en forme du bloc up pour les formulaires nom et mail*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32.5px;
+    margin-bottom: 19px;}
+
+#formulaire_up input{/*Atteinte des 2 input haut*/
+    width: 358px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 2px;/*Arrondir les angles*/
+    border-style: none;/*Enlever les bordures par défaut*/
+    margin-top: 3px;}/*Ecart des labels et boites*/
+
+#formulaire_down{
+    display: flex;
+    justify-content: center;
+    width: auto;}
+
+#formulaire_down textarea{/*Mise en forme de la partie message*/
+    display: flex;
+    justify-content: center;
+    width: 758px;
+    height: 112px;
+    font-size: 16px;
+    border-radius: 2px;
+    border-style: none;/*Enlever les bordures par défaut*/
+    margin-top: 7px;/*Espace sous le label*/}
+
+.bouton_send{   /*Mise en flexbox du bouton d'envoi du formulaire*/
+    display: flex;
+    justify-content: flex-end;}
+
+#formulaire button{/*Mise en forme du bouton envoyer*/
+    width: 123px;
+    height: 46px;
+    line-height: 46px;
+    vertical-align: middle;/*Alignement du texte au milieu*/
+    font-family: 'Open Sans',sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #2E2E2E;
+    border-radius: 5px;/*Arrondir les angles*/
+    border-style: none;/*Enlever bordures par défaut*/
+    margin-top: 26px;}
+
+#formulaire button:hover{
+    letter-spacing: .05rem;
+    position: relative;
+    background: white;
+    color: #DD5555;
+    font-weight: bold;
+    border-radius: .5rem;
+    transition: .2s all ease-in-out;}
+
+#formulaire button img{/*Mise en forme de l'image du bouton*/
+    vertical-align: middle;
+    padding-right: 3.25px;}
